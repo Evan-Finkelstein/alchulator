@@ -22,12 +22,15 @@
         <div class = 'title'>Alchulator</div>
     <section>
         <input id= "input1" type="number"/>
-        <button id ="add-button">Add</button>
-        <button id="sub-button" >Subtract</button>
-        <button id="mult-button">Multiply</button>
-        <button id="div-button">Divide</button>
+        <select name="operations" id="operations">
+            <option value="+"> +</option>
+            <option value="-"> - </option>
+            <option value="*"> * </option>
+            <option value="/"> /</option>
+        </select>
         <input id= "input2" type="number"/>
-        =
+        <button id='button'>Equals</button>
+
         <span id="answer">Answer</span>
     </section>
     </main>

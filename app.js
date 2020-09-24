@@ -3,17 +3,23 @@ import {subHandle} from './handles.js';
 import {multHandle} from './handles.js';
 import {divHandle} from './handles.js';
 
-const addButton = document.getElementById("add-button")
-const subButton = document.getElementById("sub-button")
-const multButton = document.getElementById("mult-button")
-const divButton = document.getElementById("div-button")
+const button = document.getElementById("button")
+const operation = document.getElementById("operations")
 
 
 
-addButton.addEventListener('click', sumHandle);
+button.addEventListener('click', () => {
+    const math = operation.value;
+    
+    if (math === "+"){ 
+        sumHandle();
 
-subButton.addEventListener('click', subHandle);
+    }else if (math === "-"){ 
+        subHandle();   
+    }else if (math === "*"){
+        multHandle();
 
-multButton.addEventListener('click', multHandle);
-
-divButton.addEventListener('click', divHandle);
+    } else if ( math === "/") {
+        divHandle();
+    }
+})
