@@ -10,16 +10,18 @@ const operation = document.getElementById("operations")
 
 button.addEventListener('click', () => {
     const math = operation.value;
-    
-    if (math === "+"){ 
-        sumHandle();
-
-    }else if (math === "-"){ 
-        subHandle();   
-    }else if (math === "*"){
-        multHandle();
-
-    } else if ( math === "/") {
-        divHandle();
+    switch(math){
+    case '+':
+        sumHandle()
+        break;
+    case '-':
+        subHandle()
+        break;
+    case '*':
+        multHandle()
+        break;
+    case '/':  
+        divHandle()
+        break;
     }
 })
